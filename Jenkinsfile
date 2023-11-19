@@ -45,7 +45,6 @@ pipeline {
                 echo 'image $DOCKERHUB_REPO:v$BUILD_NUMBER was deployed successfuly!'
             }
         }
-    }
 
         stage('k8 cluster access test') {
             steps {
