@@ -46,6 +46,14 @@ pipeline {
             }
         }
     }
+
+        stage('k8 cluster access test') {
+            steps {
+                echo 'test connectivity to k8 cluster'
+                sh 'kubectl get nodes'
+            }
+        }
+    }
     
     post { 
         // cleaning up...
