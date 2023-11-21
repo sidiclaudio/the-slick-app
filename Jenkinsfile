@@ -49,7 +49,6 @@ pipeline {
         stage('k8 cluster access test') {
             steps {
                 echo 'test connectivity to k8 cluster'
-                sh 'aws eks update-kubeconfig --region us-east-2 --name fun-eks'
                 sh '$HOME/bin/kubectl get nodes'
             }
         }
