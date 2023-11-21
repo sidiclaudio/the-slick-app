@@ -50,7 +50,8 @@ pipeline {
             steps {
                 echo 'test connectivity to k8 cluster'
                 sh 'aws eks update-kubeconfig --region us-east-2 --name fun-eks'
-                sh 'ls $HOME/bin'
+                sh 'source ~/.bashrc'
+                sh 'kubectl version'
             }
         }
     }
