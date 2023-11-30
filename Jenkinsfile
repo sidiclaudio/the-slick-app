@@ -49,7 +49,8 @@ pipeline {
         stage('k8 cluster access test') {
             steps {
                 echo 'test connectivity to k8 cluster'
-                sh '/var/lib/jenkins/bin/kubectl get nodes'
+                sh '/var/lib/jenkins/bin/kubectl apply -f k8-deployment.yml'
+                sh '/var/lib/jenkins/bin/kubectl apply -f k8-service.yml'
             }
         }
     }
