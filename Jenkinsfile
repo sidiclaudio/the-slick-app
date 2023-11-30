@@ -49,7 +49,7 @@ pipeline {
         stage('k8 cluster access test') {
             steps {
                 echo 'test connectivity to k8 cluster'
-                sh 'kubectl get nodes'
+                sh '/var/lib/jenkins/bin/kubectl get nodes'
             }
         }
     }
